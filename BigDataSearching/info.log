@@ -1,241 +1,83 @@
-2018-12-25 10:08:30,343 - root - INFO - <generator object selectDB at 0x03EAA120>
-2018-12-25 10:08:30,423 - root - INFO - <generator object selectDB at 0x03EA2C30>
-2018-12-25 10:09:28,597 - root - INFO - <generator object selectDB at 0x0303A180>
-2018-12-25 10:09:28,651 - root - INFO - <generator object selectDB at 0x0303A270>
-2018-12-25 10:10:08,318 - root - INFO - <generator object selectDB at 0x0306A0C0>
-2018-12-25 10:10:08,319 - root - INFO - 使用时间：0:00:00.087503
-2018-12-25 10:10:08,392 - root - INFO - <generator object selectDB at 0x03062BD0>
-2018-12-25 10:10:08,392 - root - INFO - 使用时间：0:00:00.071023
-2018-12-25 10:10:41,791 - root - INFO - <generator object selectDB at 0x0303B060>
-2018-12-25 10:10:41,792 - root - INFO - 使用时间：0:00:00.074855
-2018-12-25 10:10:41,853 - root - INFO - <generator object selectDB at 0x03034B70>
-2018-12-25 10:10:41,854 - root - INFO - 使用时间：0:00:00.054507
-2018-12-25 10:11:49,516 - root - INFO - <generator object selectDB at 0x0312B060>
-2018-12-25 10:11:49,516 - root - INFO - 使用时间：0:00:00.071614
-2018-12-25 10:11:49,562 - root - INFO - <generator object selectDB at 0x03124B70>
-2018-12-25 10:11:49,563 - root - INFO - 使用时间：0:00:00.043727
-2018-12-25 10:13:24,736 - root - INFO - <generator object selectDB at 0x0303A0C0>
-2018-12-25 10:13:24,737 - root - INFO - 使用时间：0:00:00.094824
-2018-12-25 10:13:24,810 - root - ERROR - <generator object selectDB at 0x03032BD0>
-2018-12-25 10:13:24,811 - root - INFO - 使用时间：0:00:00.072054
-2018-12-25 10:14:51,534 - root - INFO - <generator object selectDB at 0x03A4A0C0>
-2018-12-25 10:14:51,534 - root - INFO - 使用时间：0:00:00.067896
-2018-12-25 10:14:51,578 - root - ERROR - <generator object selectDB at 0x03A42BD0>
-2018-12-25 10:14:51,579 - root - INFO - 使用时间：0:00:00.042877
-2018-12-25 10:17:38,979 - root - INFO - <generator object selectDB at 0x038EA090>
-2018-12-25 10:17:38,979 - root - INFO - 使用时间：0:00:00.096582
-2018-12-25 10:17:39,034 - __main__ - ERROR - <generator object selectDB at 0x038E2BA0>
-2018-12-25 10:17:39,034 - root - INFO - 使用时间：0:00:00.052435
-2018-12-25 10:20:44,945 - root - INFO - <generator object selectDB at 0x0303A090>
-2018-12-25 10:20:44,946 - root - INFO - 使用时间：0:00:00.117182
-2018-12-25 10:20:44,993 - __main__ - ERROR - <generator object selectDB at 0x03034BA0>
-2018-12-25 10:20:44,994 - root - INFO - 使用时间：0:00:00.047066
-2018-12-25 10:21:10,309 - root - INFO - <generator object selectDB at 0x0303A090>
-2018-12-25 10:21:10,310 - root - INFO - 使用时间：0:00:00.092126
-2018-12-25 10:21:10,373 - __main__ - INFO - <generator object selectDB at 0x03032BA0>
-2018-12-25 10:21:10,373 - root - INFO - 使用时间：0:00:00.059804
-2018-12-25 10:21:34,474 - root - INFO - <generator object selectDB at 0x0308B060>
-2018-12-25 10:21:34,475 - root - INFO - 使用时间：0:00:00.075104
-2018-12-25 10:21:34,524 - __main__ - INFO - <generator object selectDB at 0x03084B70>
-2018-12-25 10:21:34,525 - root - INFO - 使用时间：0:00:00.048280
-2018-12-25 10:22:50,185 - root - INFO - <generator object selectDB at 0x0388A0C0>
-2018-12-25 10:22:50,186 - root - INFO - 使用时间：0:00:00.071325
-2018-12-25 10:22:50,240 - __main__ - INFO - <generator object selectDB at 0x0374B810>
-2018-12-25 10:22:50,240 - root - INFO - 使用时间：0:00:00.051752
-2018-12-25 10:23:12,522 - root - INFO - <generator object selectDB at 0x0303A0C0>
-2018-12-25 10:23:12,523 - root - INFO - 使用时间：0:00:00.102372
-2018-12-25 10:23:12,580 - __main__ - INFO - <generator object selectDB at 0x03032BD0>
-2018-12-25 10:23:12,581 - root - INFO - 使用时间：0:00:00.056575
-2018-12-25 10:23:32,877 - root - INFO - <generator object selectDB at 0x037EA0C0>
-2018-12-25 10:23:32,878 - root - INFO - 使用时间：0:00:00.070209
-2018-12-25 10:23:32,924 - __main__ - INFO - <generator object selectDB at 0x037E2BD0>
-2018-12-25 10:23:32,925 - root - INFO - 使用时间：0:00:00.044702
-2018-12-25 10:24:07,149 - root - INFO - <generator object selectDB at 0x0306B060>
-2018-12-25 10:24:07,150 - root - INFO - 使用时间：0:00:00.067458
-2018-12-25 10:24:07,372 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 10:24:07,388 - root - INFO - 使用时间：0:00:00.230359
-2018-12-25 10:24:37,130 - root - INFO - <generator object selectDB at 0x00ECA090>
-2018-12-25 10:24:37,130 - root - INFO - 使用时间：0:00:00.074995
-2018-12-25 10:24:37,179 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 10:24:37,179 - root - INFO - 使用时间：0:00:00.047979
-2018-12-25 10:24:50,095 - root - INFO - <generator object selectDB at 0x03C7A0C0>
-2018-12-25 10:24:50,095 - root - INFO - 使用时间：0:00:00.077987
-2018-12-25 10:24:50,147 - __main__ - INFO - False
-2018-12-25 10:24:50,147 - root - INFO - 使用时间：0:00:00.049846
-2018-12-25 10:24:54,925 - root - INFO - <generator object selectDB at 0x03A1A090>
-2018-12-25 10:24:54,925 - root - INFO - 使用时间：0:00:00.071151
-2018-12-25 10:24:54,978 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 10:24:54,978 - root - INFO - 使用时间：0:00:00.051740
-2018-12-25 10:25:07,308 - root - INFO - <generator object selectDB at 0x035DA0C0>
-2018-12-25 10:25:07,308 - root - INFO - 使用时间：0:00:00.071724
-2018-12-25 10:25:07,360 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 10:25:07,360 - root - INFO - 使用时间：0:00:00.050013
-2018-12-25 10:39:11,676 - root - INFO - <generator object selectDB at 0x03895F60>
-2018-12-25 10:39:11,676 - root - INFO - 使用时间：0:00:00.073114
-2018-12-25 10:39:11,726 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 10:39:11,726 - root - INFO - 使用时间：0:00:00.048505
-2018-12-25 10:40:46,035 - __main__ - INFO - <generator object selectDB at 0x03FA6F60>
-2018-12-25 10:40:46,035 - __main__ - INFO - 使用时间：0:00:00.069911
-2018-12-25 10:40:46,036 - root - INFO - 使用时间：0:00:00.069911
-2018-12-25 10:40:46,088 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 10:40:46,088 - __main__ - INFO - 使用时间：0:00:00.051417
-2018-12-25 10:40:46,088 - root - INFO - 使用时间：0:00:00.051417
-2018-12-25 10:41:02,434 - __main__ - INFO - <generator object selectDB at 0x033C6FC0>
-2018-12-25 10:41:02,435 - __main__ - INFO - 使用时间：0:00:00.079795
-2018-12-25 10:41:02,484 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 10:41:02,484 - __main__ - INFO - 使用时间：0:00:00.046515
-2018-12-25 10:41:05,949 - __main__ - INFO - <generator object selectDB at 0x03046F90>
-2018-12-25 10:41:05,949 - __main__ - INFO - 使用时间：0:00:00.071381
-2018-12-25 10:41:06,001 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 10:41:06,001 - __main__ - INFO - 使用时间：0:00:00.049636
-2018-12-25 10:41:07,624 - __main__ - INFO - <generator object selectDB at 0x03C66F90>
-2018-12-25 10:41:07,625 - __main__ - INFO - 使用时间：0:00:00.077458
-2018-12-25 10:41:07,682 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 10:41:07,682 - __main__ - INFO - 使用时间：0:00:00.055268
-2018-12-25 10:41:31,217 - __main__ - INFO - False
-2018-12-25 10:41:31,217 - __main__ - INFO - 使用时间：0:00:00.078648
-2018-12-25 10:41:31,281 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 10:41:31,281 - __main__ - INFO - 使用时间：0:00:00.053057
-2018-12-25 10:41:46,135 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 10:41:46,137 - __main__ - INFO - 使用时间：0:00:00.085567
-2018-12-25 10:41:46,188 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 10:41:46,188 - __main__ - INFO - 使用时间：0:00:00.049894
-2018-12-25 10:42:16,688 - __main__ - INFO - False
-2018-12-25 10:42:16,688 - __main__ - INFO - 使用时间：0:00:00.078139
-2018-12-25 10:42:16,754 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 10:42:16,770 - __main__ - INFO - 使用时间：0:00:00.070744
-2018-12-25 13:30:50,742 - __main__ - INFO - False
-2018-12-25 13:30:50,742 - __main__ - INFO - 使用时间：0:00:00.124983
-2018-12-25 13:30:50,789 - root - INFO - <Element 'Beging' at 0x038DF240>
-2018-12-25 13:31:20,832 - __main__ - INFO - False
-2018-12-25 13:31:20,847 - __main__ - INFO - 使用时间：0:00:00.093729
-2018-12-25 13:31:20,892 - root - INFO - <Element 'Beging' at 0x03AFF210>
-2018-12-25 13:32:33,060 - __main__ - INFO - False
-2018-12-25 13:32:33,060 - __main__ - INFO - 使用时间：0:00:00.074381
-2018-12-25 13:32:33,115 - root - INFO - <Element 'Beging' at 0x0318F240>
-2018-12-25 13:32:52,708 - __main__ - INFO - False
-2018-12-25 13:32:52,723 - __main__ - INFO - 使用时间：0:00:00.093728
-2018-12-25 13:32:52,755 - root - INFO - <Element 'Beging' at 0x0379F210>
-2018-12-25 13:33:24,087 - __main__ - INFO - False
-2018-12-25 13:33:24,087 - __main__ - INFO - 使用时间：0:00:00.093729
-2018-12-25 13:33:24,133 - root - INFO - <Element 'Beginning' at 0x03199C60>
-2018-12-25 13:33:24,133 - root - INFO - <Element 'Head' at 0x03435810>
-2018-12-25 13:34:15,357 - __main__ - INFO - False
-2018-12-25 13:34:15,357 - __main__ - INFO - 使用时间：0:00:00.101211
-2018-12-25 13:34:15,404 - root - INFO - <Element 'Beginning' at 0x03190240>
-2018-12-25 13:34:15,404 - root - INFO - <Element 'Head' at 0x031908A0>
-2018-12-25 13:34:15,466 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 13:34:15,466 - __main__ - INFO - 使用时间：0:00:00.109350
-2018-12-25 13:36:27,755 - __main__ - INFO - False
-2018-12-25 13:36:27,755 - __main__ - INFO - 使用时间：0:00:00.093725
-2018-12-25 13:36:27,802 - root - INFO - <Element 'Beginning' at 0x03190210>
-2018-12-25 13:36:27,802 - root - INFO - <Element 'Head' at 0x03190870>
-2018-12-25 13:36:27,802 - root - INFO - database_type
-2018-12-25 13:36:27,802 - root - INFO - ip_adress
-2018-12-25 13:36:27,802 - root - INFO - user_name
-2018-12-25 13:36:27,802 - root - INFO - user_pwd
-2018-12-25 13:36:27,802 - root - INFO - db_name
-2018-12-25 13:37:53,398 - __main__ - INFO - False
-2018-12-25 13:37:53,398 - __main__ - INFO - 使用时间：0:00:00.082630
-2018-12-25 13:37:53,444 - root - INFO - <Element 'Beginning' at 0x03790210>
-2018-12-25 13:37:53,444 - root - INFO - <Element 'Head' at 0x03790870>
-2018-12-25 13:38:01,561 - __main__ - INFO - False
-2018-12-25 13:38:01,561 - __main__ - INFO - 使用时间：0:00:00.093765
-2018-12-25 13:38:01,608 - root - INFO - <Element 'Beginning' at 0x037B0240>
-2018-12-25 13:38:01,608 - root - INFO - <Element 'Head' at 0x037B08A0>
-2018-12-25 13:39:16,627 - __main__ - INFO - False
-2018-12-25 13:39:16,627 - __main__ - INFO - 使用时间：0:00:00.078108
-2018-12-25 13:39:16,674 - root - INFO - <Element 'Beginning' at 0x032C0210>
-2018-12-25 13:39:16,674 - root - INFO - <Element 'Head' at 0x032C0870>
-2018-12-25 13:39:16,674 - root - INFO - {'database_type': 'O', 'ip_adress': '127.0.0.1', 'user_name': 'root', 'user_pwd': 'oracle', 'db_name': 'world'}
-2018-12-25 13:40:24,593 - __main__ - INFO - False
-2018-12-25 13:40:24,593 - __main__ - INFO - 使用时间：0:00:00.109348
-2018-12-25 13:40:24,639 - root - INFO - <Element 'Beginning' at 0x03A49C60>
-2018-12-25 13:40:42,614 - __main__ - INFO - False
-2018-12-25 13:40:42,614 - __main__ - INFO - 使用时间：0:00:00.078110
-2018-12-25 13:40:42,661 - root - INFO - <Element 'Beginning' at 0x03870210>
-2018-12-25 13:40:59,379 - __main__ - INFO - False
-2018-12-25 13:40:59,379 - __main__ - INFO - 使用时间：0:00:00.082793
-2018-12-25 13:40:59,425 - root - INFO - <Element 'Beginning' at 0x04670240>
-2018-12-25 13:40:59,488 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 13:40:59,488 - __main__ - INFO - 使用时间：0:00:00.109311
-2018-12-25 13:41:35,596 - __main__ - INFO - False
-2018-12-25 13:41:35,596 - __main__ - INFO - 使用时间：0:00:00.070079
-2018-12-25 13:41:35,643 - root - INFO - <Element 'Beginning' at 0x03DC0210>
-2018-12-25 13:41:35,705 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 13:41:35,705 - __main__ - INFO - 使用时间：0:00:00.093755
-2018-12-25 13:43:25,606 - __main__ - INFO - False
-2018-12-25 13:43:25,606 - __main__ - INFO - 使用时间：0:00:00.093760
-2018-12-25 13:43:25,653 - root - INFO - <Element 'Beginning' at 0x038E0240>
-2018-12-25 13:43:25,715 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 13:43:25,715 - __main__ - INFO - 使用时间：0:00:00.109354
-2018-12-25 13:43:56,539 - __main__ - INFO - False
-2018-12-25 13:43:56,539 - __main__ - INFO - 使用时间：0:00:00.078139
-2018-12-25 13:43:56,586 - __main__ - INFO - <Element 'Beginning' at 0x04690210>
-2018-12-25 13:43:56,649 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 13:43:56,649 - __main__ - INFO - 使用时间：0:00:00.109316
-2018-12-25 15:01:06,659 - __main__ - INFO - False
-2018-12-25 15:01:06,734 - __main__ - INFO - False
-2018-12-25 15:01:06,814 - __main__ - INFO - False
-2018-12-25 15:01:06,816 - __main__ - INFO - 使用时间：0:00:00.266287
-2018-12-25 15:01:06,906 - __main__ - INFO - False
-2018-12-25 15:01:06,985 - __main__ - INFO - False
-2018-12-25 15:01:07,072 - __main__ - INFO - False
-2018-12-25 15:01:07,073 - __main__ - INFO - 使用时间：0:00:00.254333
-2018-12-25 15:01:49,407 - __main__ - INFO - False
-2018-12-25 15:01:49,470 - __main__ - INFO - False
-2018-12-25 15:01:49,534 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 15:01:49,535 - __main__ - INFO - 使用时间：0:00:00.214424
-2018-12-25 15:01:49,600 - __main__ - INFO - False
-2018-12-25 15:01:49,663 - __main__ - INFO - False
-2018-12-25 15:01:49,726 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 15:01:49,727 - __main__ - INFO - 使用时间：0:00:00.189496
-2018-12-25 15:02:27,337 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 15:02:27,400 - __main__ - INFO - False
-2018-12-25 15:02:27,463 - __main__ - INFO - False
-2018-12-25 15:02:27,523 - __main__ - INFO - False
-2018-12-25 15:02:27,584 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 15:02:27,642 - __main__ - INFO - False
-2018-12-25 15:02:27,702 - __main__ - INFO - False
-2018-12-25 15:02:27,761 - __main__ - INFO - False
-2018-12-25 15:02:27,824 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 15:02:27,824 - __main__ - INFO - 使用时间：0:00:00.576457
-2018-12-25 15:02:27,899 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 15:02:27,956 - __main__ - INFO - False
-2018-12-25 15:02:28,018 - __main__ - INFO - False
-2018-12-25 15:02:28,078 - __main__ - INFO - False
-2018-12-25 15:02:28,137 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 15:02:28,202 - __main__ - INFO - False
-2018-12-25 15:02:28,277 - __main__ - INFO - False
-2018-12-25 15:02:28,353 - __main__ - INFO - False
-2018-12-25 15:02:28,427 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 15:02:28,428 - __main__ - INFO - 使用时间：0:00:00.602390
-2018-12-25 15:03:14,678 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 15:03:14,737 - __main__ - INFO - False
-2018-12-25 15:03:14,738 - __main__ - INFO - 使用时间：0:00:00.147607
-2018-12-25 15:03:14,804 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 15:03:14,865 - __main__ - INFO - False
-2018-12-25 15:03:14,866 - __main__ - INFO - 使用时间：0:00:00.125663
-2018-12-25 15:04:12,634 - __main__ - INFO - (True, (1, 'Kabul', 'AFG', 'Kabol', 1780000))
-2018-12-25 15:04:12,692 - __main__ - INFO - False
-2018-12-25 15:04:12,693 - __main__ - INFO - 使用时间：0:00:00.146607
-2018-12-27 22:40:36,955 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - ReadXml - 106  - parse xml success!
-2018-12-27 22:46:18,756 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - ReadXml - 98  - xmlfile: F:\PycharmProjects\s12\test\BigDataSearching\.xml
-2018-12-27 22:46:18,757 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - ReadXml - 102  - parse xml faild!
-2018-12-27 22:50:32,961 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - ReadXml - 98  - xmlfile: F:\PycharmProjects\s12\test\BigDataSearching\test.xml
-2018-12-27 22:50:32,963 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - ReadXml - 106  - parse xml success!
-2018-12-27 22:51:33,569 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - ReadXml - 98  - xmlfile: F:\PycharmProjects\s12\test\BigDataSearching\test.xml
-2018-12-27 22:51:33,570 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - ReadXml - 106  - parse xml success!
-2018-12-27 22:52:53,698 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - ReadXml - 98  - xmlfile: F:\PycharmProjects\s12\test\BigDataSearching\test.xml
-2018-12-27 22:53:17,531 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - ReadXml - 106  - parse xml success!
-2018-12-27 22:55:13,735 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - ReadXml - 98  - xmlfile: F:\PycharmProjects\s12\test\BigDataSearching\test.xml
-2018-12-27 22:55:13,737 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - ReadXml - 106  - parse xml success!
-2018-12-27 22:59:11,547 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - MainText - 142  - test.xml
-2018-12-27 22:59:11,550 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - ReadXml - 98  - xmlfile: F:\PycharmProjects\s12\test\BigDataSearching\test.xml
-2018-12-27 22:59:11,551 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - ReadXml - 106  - parse xml success!
-2018-12-27 23:00:35,283 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - MainText - 142  - test.xml
-2018-12-27 23:00:35,286 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - ReadXml - 98  - xmlfile: F:\PycharmProjects\s12\test\BigDataSearching\test.xml
-2018-12-27 23:00:35,287 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - ReadXml - 106  - parse xml success!
-2018-12-27 23:02:33,178 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - MainText - 147  - test.xml
-2018-12-27 23:02:33,181 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - ReadXml - 98  - xmlfile: F:\PycharmProjects\s12\test\BigDataSearching\test.xml
-2018-12-27 23:02:33,182 - __main__ - INFO - F:/PycharmProjects/s12/test/BigDataSearching/TEST_XML.py - TEST_XML.py - ReadXml - 106  - parse xml success!
+2019-01-06 11:31:05,604 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 136  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'15021672263': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'15021672263': 'select * from oldboy.student02'}]]}
+2019-01-06 11:31:05,622 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - (5, 'e', 22, 'ee')
+2019-01-06 11:31:05,636 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - False
+2019-01-06 11:31:05,641 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - False
+2019-01-06 11:31:05,656 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - False
+2019-01-06 11:31:05,660 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - False
+2019-01-06 11:31:05,675 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - False
+2019-01-06 11:31:05,675 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 109  - 使用时间：0:00:00.075009
+2019-01-06 11:32:07,534 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 136  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'15021672263': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 11:32:07,554 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - (5, 'e', 22, 'ee')
+2019-01-06 11:32:07,558 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - False
+2019-01-06 11:32:07,573 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - False
+2019-01-06 11:32:07,579 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - False
+2019-01-06 11:32:07,584 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - False
+2019-01-06 11:32:07,598 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - False
+2019-01-06 11:32:07,598 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 109  - 使用时间：0:00:00.068509
+2019-01-06 11:32:59,832 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 136  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 11:32:59,860 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - (5, 'e', 22, 'ee')
+2019-01-06 11:32:59,873 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - False
+2019-01-06 11:32:59,886 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - False
+2019-01-06 11:32:59,901 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - (4, 'd', 22, 'dd')
+2019-01-06 11:32:59,906 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - False
+2019-01-06 11:32:59,919 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 159  - False
+2019-01-06 11:32:59,920 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 109  - 使用时间：0:00:00.091512
+2019-01-06 13:12:07,372 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 137  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 13:12:07,408 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 110  - 使用时间：0:00:00.041005
+2019-01-06 13:14:05,436 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 137  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 13:14:05,470 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 110  - 使用时间：0:00:00.037505
+2019-01-06 13:16:32,070 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 137  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 13:19:29,739 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 137  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 13:19:29,775 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 110  - 使用时间：0:00:00.040505
+2019-01-06 13:21:35,332 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 140  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 13:21:35,366 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 113  - 使用时间：0:00:00.038005
+2019-01-06 14:14:13,705 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 140  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:14:13,753 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 113  - 使用时间：0:00:00.052506
+2019-01-06 14:14:47,352 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 140  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:14:47,398 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 113  - 使用时间：0:00:00.051507
+2019-01-06 14:25:39,910 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 140  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:26:55,741 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 113  - 使用时间：0:01:15.834130
+2019-01-06 14:28:25,221 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 140  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:28:31,859 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 169  - (5, 'e', 22, 'ee')
+2019-01-06 14:28:38,454 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 169  - (5, 'e', 22, 'ee')
+2019-01-06 14:28:38,468 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 169  - False
+2019-01-06 14:28:45,119 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 169  - (4, 'd', 22, 'dd')
+2019-01-06 14:29:31,192 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 169  - False
+2019-01-06 14:29:31,208 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 169  - False
+2019-01-06 14:29:31,236 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 113  - 使用时间：0:01:06.019883
+2019-01-06 14:31:10,542 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 140  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:31:17,487 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 169  - (5, 'e', 22, 'ee')
+2019-01-06 14:31:24,157 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 169  - (5, 'e', 22, 'ee')
+2019-01-06 14:31:24,161 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 169  - False
+2019-01-06 14:31:30,839 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 169  - (4, 'd', 22, 'dd')
+2019-01-06 14:31:39,009 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 169  - False
+2019-01-06 14:31:39,023 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - theMain - 169  - False
+2019-01-06 14:31:39,044 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 113  - 使用时间：0:00:28.505620
+2019-01-06 14:32:32,243 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 140  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:33:08,193 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 113  - 使用时间：0:00:35.953565
+2019-01-06 14:33:37,164 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 140  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:34:09,947 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 113  - 使用时间：0:00:32.787164
+2019-01-06 14:34:19,022 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 140  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:34:55,366 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 113  - 使用时间：0:00:36.348615
+2019-01-06 14:35:15,020 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 140  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:35:42,809 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 113  - 使用时间：0:00:27.792029
+2019-01-06 14:35:58,032 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 140  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:36:29,893 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 113  - 使用时间：0:00:31.864547
+2019-01-06 14:36:39,736 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 140  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:37:16,284 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 113  - 使用时间：0:00:36.551642
+2019-01-06 14:37:35,486 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 140  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:38:02,897 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 113  - 使用时间：0:00:27.414481
+2019-01-06 14:38:31,023 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 140  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:38:59,280 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 113  - 使用时间：0:00:28.261589
+2019-01-06 14:39:07,522 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 140  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:39:42,047 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 113  - 使用时间：0:00:34.528884
+2019-01-06 14:47:32,791 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 141  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:47:32,870 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 114  - 使用时间：0:00:00.082510
+2019-01-06 14:47:53,256 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 141  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:47:53,281 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 114  - 使用时间：0:00:00.028504
+2019-01-06 14:48:04,562 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 141  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:48:40,430 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 114  - 使用时间：0:00:35.871555
+2019-01-06 14:54:57,557 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 147  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:55:16,115 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 147  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}
+2019-01-06 14:55:52,298 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - wrapper - 120  - 使用时间：0:00:36.185595
+2019-01-06 15:22:31,220 - __main__ - INFO - F:/PycharmProjects/GitHub/test/BigDataSearching/BigDataSearching_wrapper.py - BigDataSearching_wrapper.py - ReadMain - 147  - {'lis': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'lis', 'user_name': 'root', 'user_pwd': '123456'}, [{'5': 'select * from oldboy.student'}, {'5': 'select * from oldboy.student01'}, {'5': 'select * from oldboy.student02'}]], 'gcs': [{'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'sql': "select table_name from information_schema.tables t where t.table_schema='oldboy'", 'type': 'gcs', 'user_name': 'root', 'user_pwd': '123456'}, [{'dd': 'select * from oldboy.student'}, {'15021672263': 'select * from oldboy.student01'}, {'dd': 'select * from oldboy.student02'}]]}

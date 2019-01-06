@@ -20,10 +20,12 @@ import logging
 import json
 import logging.config
 import xml.etree.ElementTree as ET
+import threading
 ################################
 import pymssql
 import cx_Oracle
-import MySQLdb
+import pymysql
+import threadpool
 
 
 def setup_logging(default_path='logging.json', default_level=logging.debug,env_key='LOG_CFG'):
@@ -67,53 +69,54 @@ class XmlParse(object):
         pass
 
 
-def connDb(databasetype, ipAdress, userName, userPwd, dbName, listenPort=None):
-    if databasetype == 'S':
-        conn = pymssql.connect(ipAdress, userName, userPwd, dbName)
+def connDb(**kwargs):
+    database_type = kwargs['database_type']
+    ip_adress = kwargs['ip_adress']
+    user_name = kwargs['user_name']
+    user_pwd = kwargs['user_pwd']
+    db_name = kwargs['db_name']
+    listen_port = kwargs['listen_port']
+    if database_type == 'O':
+        dsn = cx_Oracle.makedsn(ip_adress, listen_port, db_name)
+        conn = cx_Oracle.connect(user_name, user_pwd, dsn)
         return conn
-    elif databasetype == 'O':
-        dsn = cx_Oracle.makedsn(ipAdress, listenPort, dbName)
-        conn = cx_Oracle.connect(userName, userPwd, dsn)
+    if database_type == 'S':
+        conn = pymssql.connect(ip_adress, user_name, user_pwd, db_name)
         return conn
-    elif databasetype == 'M':
-        conn = MySQLdb.connect(ipAdress, userName, userPwd, dbName, charset='utf8')
+    if database_type == 'M':
+        conn = pymysql.connect(ip_adress, user_name, user_pwd, db_name, charset='utf8')
         return conn
 
 
-def selectDB(db, sql, values):
+def selectDB(**kwargs):
+    db = kwargs['db']
+    sql = kwargs['sql']
+    values = kwargs['values']
+    setup_logging(default_path='logging.json', default_level=logging.debug, env_key='LOG_CFG')
+    logger = logging.getLogger(__name__)
     cursor = db.cursor()
     cursor.execute(sql)
     for result in cursor:
+        logger.debug(result)
+        logger.debug(values)
         if values in str(result):
             cursor.close()
             db.close()
-            yield True, result
+            return result
         else:
-            cursor.close()
-            db.close()
-            yield False
-
-
-def selectDB11(db, sql, values):
-    cursor = db.cursor()
-    cursor.execute(sql)
-    results = cursor.fetchall()
+            pass
     cursor.close()
     db.close()
-    for result in results:
-        if values in str(result):
-            yield True, result
-        else:
-            yield False
+    return False
 
 
 def timeer(func):
     def wrapper():
         setup_logging(default_path='logging.json', default_level=logging.debug, env_key='LOG_CFG')
+        logger = logging.getLogger(__name__)
         a = datetime.datetime.now()
         func()
         b = datetime.datetime.now()
-        logger = logging.getLogger(__name__)
         logger.info("使用时间：%s" % (b - a))
     return wrapper
 
@@ -132,7 +135,7 @@ def ReadMain(XML_NAME):
         logger.debug('caption=====>%s' % caption)
         logger.debug(caption.attrib)
         dict_db_list = caption.attrib
-        child_list = caption.findall("Body")
+        child_list = caption.findall("body")
         list_dict_str = []
         logger.debug(child_list)
         for i in range(len(child_list)):
@@ -141,6 +144,7 @@ def ReadMain(XML_NAME):
             list_dict_str.append(dict_str)
         logger.debug('list_dict_str--->%s' % list_dict_str)
         dict_all_list[dict_db_list['type']] = [dict_db_list, list_dict_str]
+    logger.info(dict_all_list)
     return dict_all_list
 
 
@@ -151,42 +155,48 @@ def theMain():
     dict_all_list = ReadMain('EXP_DATA_CONF.xml')
     for i in range(len(dict_all_list.keys())):
         dict_db_list, list_dict_str = dict_all_list[list(dict_all_list.keys())[i]]
+        codes = []
         for i in list_dict_str:
+            lists = {}
             logger.debug(i)
             values = list(i.keys())[0]
             sql = i[values]
-            database_type = dict_db_list['database_type']
-            ip_adress = dict_db_list['ip_adress']
-            user_name = dict_db_list['user_name']
-            user_pwd = dict_db_list['user_pwd']
-            db_name = dict_db_list['db_name']
-            listen_port = dict_db_list['listen_port']
-            db = connDb(database_type, ip_adress, user_name, user_pwd, db_name, listen_port)
-            res = selectDB(db, sql, values)
-            logger = logging.getLogger(__name__)
-            logger.info(res.__next__())
+            # database_type = dict_db_list['database_type']
+            # ip_adress = dict_db_list['ip_adress']
+            # user_name = dict_db_list['user_name']
+            # user_pwd = dict_db_list['user_pwd']
+            # db_name = dict_db_list['db_name']
+            # listen_port = dict_db_list['listen_port']
+            # db = connDb(database_type, ip_adress, user_name, user_pwd, db_name, listen_port)
+            db = connDb(**dict_db_list)
+            lists['db'] = db
+            lists['sql'] = sql
+            lists['values'] = values
+            codes.append(lists)
+            # res = selectDB(lists)
+            # logger.info(res)
+
+        # 多线程方式1
+        # logger.debug(codes)
+        # pool = threadpool.ThreadPool(2)
+        # tasks = threadpool.makeRequests(selectDB,codes)
+        # [pool.putRequest(task) for task in tasks]
+        # pool.wait()
+
+        # 多线程方式2
+        logger.debug(codes)
+        threads = []
+        files = range(len(codes))
+        for i in codes:
+            t = threading.Thread(target=selectDB,kwargs=i)
+            threads.append(t)
+
+        for j in files:
+            threads[j].start()
+        for j in files:
+            threads[j].join()
 
 
-# @timeer
-# def theMain11():
-#     setup_logging(default_path='logging.json', default_level=logging.debug, env_key='LOG_CFG')
-#     logger = logging.getLogger(__name__)
-#     dict_all_list = ReadMain('EXP_DATA_CONF.xml')
-#     for i in range(len(dict_all_list.keys())):
-#         dict_db_list, list_dict_str = dict_all_list[list(dict_all_list.keys())[i]]
-#         for i in list_dict_str:
-#             logger.debug(i)
-#             values = list(i.keys())[0]
-#             sql = i[values]
-#             database_type = dict_db_list['database_type']
-#             ip_adress = dict_db_list['ip_adress']
-#             user_name = dict_db_list['user_name']
-#             user_pwd = dict_db_list['user_pwd']
-#             db_name = dict_db_list['db_name']
-#             db = connDb(database_type, ip_adress, user_name, user_pwd, db_name)
-#             res = selectDB(db, sql, values)
-#             logger = logging.getLogger(__name__)
-#             logger.info(res.__next__())
+
 if __name__ == "__main__":
     theMain()
-    # theMain11()
