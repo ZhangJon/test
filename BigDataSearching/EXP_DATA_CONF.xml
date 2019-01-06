@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Beginning>
+    <!--<Head type="work" database_type="O" ip_adress="127.0.0.1" user_name="root" user_pwd="oracle" db_name="world">-->
+        <!--<Body match_str="15021672263">select * from lis.BACKCOMINTERCHECK</Body>-->
+        <!--<Body match_str="11111">select * from lis.LAAGENT</Body>-->
+        <!--<Body match_str="1502164444472263">select * from lis.LAAGENTMESS</Body>-->
+    <!--</Head>-->
+    <Head type="lis" database_type="M" ip_adress="127.0.0.1" user_name="root" user_pwd="oracle" db_name="world" listen_port="">
+        <Body match_str="0">select * from city</Body>
+    </Head>
+    <Head type="li" database_type="M" ip_adress="127.0.0.1" user_name="root" user_pwd="oracle" db_name="world" listen_port="">
+        <Body match_str="15021672263">select * from city</Body>
+    </Head>
+</Beginning>
