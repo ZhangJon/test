@@ -25,7 +25,6 @@ import xml.etree.ElementTree as ET
 import cx_Oracle
 
 
-
 def SetupLogging(default_path='logging.json', default_level=logging.debug,env_key='LOG_CFG'):
     """Setup logging configuration
     """
