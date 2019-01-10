@@ -96,7 +96,6 @@ def ConnDb(database_type, ip_adress, user_name, user_pwd, db_name, listen_port=N
         return conn
 
 
-
 def SelectDB(db, sql):
     SetupLogging(default_path='logging.json', default_level=logging.debug, env_key='LOG_CFG')
     logger = logging.getLogger(__name__)
