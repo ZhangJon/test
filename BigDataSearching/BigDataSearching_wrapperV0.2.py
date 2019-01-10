@@ -170,6 +170,81 @@ def ReadMain(XML_NAME):
     return dict_all_list
 
 
+class DatabaseOpertion(object):
+    def __init__(self,*args,**kwargs):
+        self.conn = None
+        self.cursor = None
+        self.args = args
+        self.kwargs = kwargs
+
+    def ConnDatabase(self):
+        database_type = self.kwargs['database_type']
+        ip_adress = self.kwargs['ip_adress']
+        user_name = self.kwargs['user_name']
+        user_pwd = self.kwargs['user_pwd']
+        db_name = self.kwargs['db_name']
+        listen_port = self.kwargs['listen_port']
+        if database_type == 'O':
+            dsn = cx_Oracle.makedsn(ip_adress, listen_port, db_name)
+            self.conn = cx_Oracle.connect(user_name, user_pwd, dsn)
+            return self.conn
+        elif database_type == 'S':
+            self.conn = pymssql.connect(ip_adress, user_name, user_pwd, db_name)
+            return self.conn
+        elif database_type == 'M':
+            self.conn = pymysql.connect(ip_adress, user_name, user_pwd, db_name, charset='utf8')
+            return self.conn
+
+    def SelectDatabase(self):
+        sql = self.kwargs['sql']
+        self.cursor = self.conn.cursor()
+        self.cursor.execute(sql)
+        return self.cursor
+
+    def UpdateDatabase(self):
+        pass
+
+    def DeleteDatabase(self):
+        pass
+
+    def MatchStr(self):
+        self.SelectDatabase()
+        values = self.kwargs['values']
+        for result in self.cursor:
+            if values in str(result):
+                self.cursor.close()
+                self.conn.close()
+                return result
+            else:
+                pass
+        self.cursor.close()
+        self.conn.close()
+        return False
+
+    def PieceTogetherSql(self):
+        self.SelectDatabase()
+        database_type = self.kwargs['database_type']
+        results = self.cursor.fetchall()
+        self.cursor.close()
+        self.conn.close()
+        res = []
+        if database_type == 'O':
+            user_name = self.kwargs['user_name']
+            for result in results:
+                result = "select * from %s.%s" % (user_name,result[0])
+                res.append(result)
+        elif database_type == 'S':
+            for result in results:
+                result = "select * from %s" % (result[0])
+                res.append(result)
+        elif database_type == 'M':
+            db_name = self.kwargs['db_name']
+            for result in results:
+                result = "select * from %s.%s" % (db_name,result[0])
+                res.append(result)
+        return res
+
+
 @timeer
 def theMain(xml_file):
     SetupLogging(default_path='logging.json', default_level=logging.debug, env_key='LOG_CFG')
