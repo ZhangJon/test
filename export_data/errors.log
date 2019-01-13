@@ -1,7 +1,1 @@
-2019-01-02 16:25:48,781 - __main__ - ERROR - APP_Q_DATA V0.1.py - createExcel - 200  - 创建保存Excel存在异常：[Errno 2] No such file or directory: '[].xlsx'
-2019-01-02 16:27:32,054 - __main__ - ERROR - APP_Q_DATA V0.1.py - createExcel - 200  - 创建保存Excel存在异常：[Errno 2] No such file or directory: '[].xlsx'
-2019-01-02 16:29:11,527 - __main__ - ERROR - APP_Q_DATA V0.1.py - createExcel - 200  - 创建保存Excel存在异常：[Errno 2] No such file or directory: '[].xlsx'
-2019-01-02 16:30:59,534 - __main__ - ERROR - APP_Q_DATA V0.1.py - createExcel - 200  - 创建保存Excel存在异常：[Errno 2] No such file or directory: '[].xlsx'
-2019-01-02 16:32:49,867 - __main__ - ERROR - APP_Q_DATA V0.1.py - createExcel - 200  - 创建保存Excel存在异常：[Errno 2] No such file or directory: '[].xlsx'
-2019-01-02 16:33:06,596 - __main__ - ERROR - APP_Q_DATA V0.1.py - createExcel - 201  - 创建保存Excel存在异常：[Errno 2] No such file or directory: '[].xlsx'
-2019-01-02 16:34:37,948 - __main__ - ERROR - APP_Q_DATA V0.1.py - ReadMain - 270  - 调用函数功能存在异常：MatchData() missing 1 required positional argument: 'dict_sheet_sql'
+﻿

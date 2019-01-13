@@ -251,6 +251,8 @@ def theMain(xml_file):
     SetupLogging(default_path='logging.json', default_level=logging.debug, env_key='LOG_CFG')
     logger = logging.getLogger(__name__)
     logger.debug(xml_file)
+
+    # 设置当前客户端数据库执行字符集环境变量
     os.environ['NLS_LANG'] = 'SIMPLIFIED CHINESE_CHINA.UTF8'
     dict_all_list = ReadMain(xml_file)
     logger.debug(dict_all_list)

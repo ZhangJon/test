@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Beginning>
-    <Head database_type="M" db_name="oldboy" ip_adress="10.73.62.217" listen_port="3306" sql="select table_name from information_schema.tables t where t.table_schema='oldboy'" type="lis" user_name="root" user_pwd="123456"> <body match_str="5">select * from oldboy.student</body><body match_str="5">select * from oldboy.student01</body><body match_str="5">select * from oldboy.student02</body></Head>
-    <Head database_type="M" db_name="oldboy" ip_adress="10.73.62.217" listen_port="3307" sql="select table_name from information_schema.tables t where t.table_schema='oldboy'" type="gcs" user_name="root" user_pwd="123456"> <body match_str="dd">select * from oldboy.student</body><body match_str="15021672263">select * from oldboy.student01</body><body match_str="dd">select * from oldboy.student02</body></Head>
+    <Head database_type="M" db_name="oldboy" ip_adress="10.73.62.217" listen_port="3306" sql="select table_name from information_schema.tables t where t.table_schema='oldboy'" type="lis" user_name="root" user_pwd="123456">
+        <body match_str="5">select * from oldboy.student</body>
+        <body match_str="5">select * from oldboy.student01</body>
+        <body match_str="5">select * from oldboy.student02</body>
+    </Head>
+    <Head database_type="M" db_name="oldboy" ip_adress="10.73.62.217" listen_port="3307" sql="select table_name from information_schema.tables t where t.table_schema='oldboy'" type="gcs" user_name="root" user_pwd="123456">
+        <body match_str="dd">select * from oldboy.student</body>
+        <body match_str="15021672263">select * from oldboy.student01</body>
+        <body match_str="dd">select * from oldboy.student02</body>
+    </Head>
 </Beginning>

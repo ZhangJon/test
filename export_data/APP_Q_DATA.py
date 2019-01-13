@@ -18,6 +18,7 @@ import xml.etree.ElementTree as ET
 import sys
 import os.path
 import time
+import base64
 import logging
 import json
 import logging.config
@@ -29,6 +30,11 @@ from email.mime.application import MIMEApplication
 
 import openpyxl
 import cx_Oracle
+import pymysql
+import pymssql
+from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+from cryptography.hazmat.backends import default_backend
 
 
 def SetupLogging(default_path='logging.json', default_level=logging.debug,env_key='LOG_CFG'):
@@ -53,6 +59,112 @@ def EnterTime():
     return nowTime,time_flag
 
 
+class AESCrypto(object):
+    """AESCrypto."""
+
+    def __init__(self, aes_key, aes_iv):
+        """aes_key, aes_iv 可以自己定义，aes_key 32位，aes_iv 16位，如果用中文，一个中文字占三位"""
+        if not isinstance(aes_key, bytes):
+            aes_key = aes_key.encode()
+
+        if not isinstance(aes_iv, bytes):
+            aes_iv = aes_iv.encode()
+
+        self.aes_key = aes_key
+        self.aes_iv = aes_iv
+
+    def encrypt(self, data, mode='cbc'):
+        """encrypt."""
+        func_name = '{}_encrypt'.format(mode)
+        func = getattr(self, func_name)
+        if not isinstance(data, bytes):
+            data = data.encode()
+
+        return func(data)
+
+    def decrypt(self, data, mode='cbc'):
+        """decrypt."""
+        func_name = '{}_decrypt'.format(mode)
+        func = getattr(self, func_name)
+
+        if not isinstance(data, bytes):
+            data = data.encode()
+
+        return func(data)
+
+    # def cfb_encrypt(self, data):
+    #     """CFB encrypt."""
+    #     cipher = Cipher(algorithms.AES(self.aes_key),
+    #                     modes.CFB(self.aes_iv),
+    #                     backend=default_backend())
+
+    #     return cipher.encryptor().update(data)
+
+    # def cfb_decrypt(self, data):
+    #     """CFB decrypt."""
+    #     cipher = Cipher(algorithms.AES(self.aes_key),
+    #                     modes.CFB(self.aes_iv),
+    #                     backend=default_backend())
+
+    #     return cipher.decryptor().update(data)
+
+    def ctr_encrypt(self, data):
+        """ctr_encrypt."""
+        cipher = Cipher(algorithms.AES(self.aes_key),
+                        modes.CTR(self.aes_iv),
+                        backend=default_backend())
+
+        return cipher.encryptor().update(self.pkcs7_padding(data))
+
+    def ctr_decrypt(self, data):
+        """ctr_decrypt."""
+        cipher = Cipher(algorithms.AES(self.aes_key),
+                        modes.CTR(self.aes_iv),
+                        backend=default_backend())
+
+        uppaded_data = self.pkcs7_unpadding(cipher.decryptor().update(data))
+        return uppaded_data.decode()
+
+    def cbc_encrypt(self, data):
+        """cbc_encrypt."""
+        cipher = Cipher(algorithms.AES(self.aes_key),
+                        modes.CBC(self.aes_iv),
+                        backend=default_backend())
+
+        return cipher.encryptor().update(self.pkcs7_padding(data))
+
+    def cbc_decrypt(self, data):
+        """cbc_decrypt."""
+        cipher = Cipher(algorithms.AES(self.aes_key),
+                        modes.CBC(self.aes_iv),
+                        backend=default_backend())
+
+        uppaded_data = self.pkcs7_unpadding(cipher.decryptor().update(data))
+        return uppaded_data.decode()
+
+    @staticmethod
+    def pkcs7_padding(data):
+        """pkcs7_padding."""
+        padder = padding.PKCS7(algorithms.AES.block_size).padder()
+
+        padded_data = padder.update(data) + padder.finalize()
+
+        return padded_data
+
+    @staticmethod
+    def pkcs7_unpadding(padded_data):
+        """pkcs7_unpadding."""
+        unpadder = padding.PKCS7(algorithms.AES.block_size).unpadder()
+        data = unpadder.update(padded_data)
+
+        try:
+            uppadded_data = data + unpadder.finalize()
+        except ValueError:
+            raise ValueError('无效的加密信息!')
+        else:
+            return uppadded_data
+
+
 class XmlParse:
     def __init__(self, file_path):
         self.tree = None
@@ -75,21 +187,38 @@ class XmlParse:
             return self.tree
 
 
-def ConnDb():
+def ConnDb(**dict_attrib):
     """
     建立数据库连接
     """
     SetupLogging(default_path='logging.json', default_level=logging.debug, env_key='LOG_CFG')
     logger = logging.getLogger(__name__)
     try:
-        dbName = 'SAORA02'
-        userName = "qryapp"
-        userPwd = "JIA45xdp"
-        ipAdress = '10.121.8.31'
-        databasePoint = '1521'
-        dsn = cx_Oracle.makedsn(ipAdress,databasePoint , dbName)
-        db = cx_Oracle.connect(userName, userPwd, dsn)
-        return db
+        database_type = dict_attrib['database_type']
+        ip_adress = dict_attrib['ip_adress']
+        user_name = dict_attrib['user_name']
+        user_pwd = dict_attrib['user_pwd']
+        logger.debug(user_pwd)
+        logger.debug(type(user_pwd))
+        user_pwd = base64.b64decode(user_pwd.encode('utf-8'))
+
+        logger.debug(user_pwd)
+        logger.debug(type(user_pwd))
+
+        crypto = AESCrypto('张-密^&($#@-7/*FK-ybf码w-学f', 'm2Vd=G进yt%爱&')
+        user_pwd = crypto.decrypt(user_pwd)
+        db_name = dict_attrib['db_name']
+        listen_port = dict_attrib['listen_port']
+        if database_type == 'O':
+            dsn = cx_Oracle.makedsn(ip_adress, listen_port, db_name)
+            conn = cx_Oracle.connect(user_name, user_pwd, dsn)
+            return conn
+        elif database_type == 'M':
+            conn = pymysql.connect(ip_adress, user_name, user_pwd, db_name, charset='utf8')
+            return conn
+        elif database_type == 'S':
+            conn = pymssql.connect(ip_adress, user_name, user_pwd, db_name)
+            return conn
     except Exception as e:
         logger.error("连接数据库功能存在异常：%s" %e)
 
@@ -200,12 +329,15 @@ def createExcel(nowTime,time_flag,excelname,*shuJuKuChaXunXinXi,**allSheetNameDi
         logger.error("创建保存Excel存在异常：%s" %e)
 
 
-def MatchData(nowTime,time_flag,EXCEL_NAME,EMAIL_ADDRESS,dcit_sheet_sql):
+def MatchData(nowTime,time_flag,dcit_sheet_sql,**dict_attrib):
     SetupLogging(default_path='logging.json', default_level=logging.debug, env_key='LOG_CFG')
     logger = logging.getLogger(__name__)
     try:
+        EXCEL_NAME = dict_attrib['EXCEL_NAME']
+        EMAIL_ADD = dict_attrib['EMAIL_ADD']
+        logger.debug('dict_attrib：%s' %dict_attrib)
         logger.debug('EXCEL_NAME：%s' %EXCEL_NAME)
-        logger.debug('EMAIL_ADDRESS：%s' %EMAIL_ADDRESS)
+        logger.debug('EMAIL_ADDRESS：%s' %EMAIL_ADD)
         logger.debug('dcit_sheet_sql：%s' %dcit_sheet_sql)
         logger.debug('nowTime：%s' %nowTime)
         shuJuKuChaXunXinXi=[]
@@ -214,13 +346,13 @@ def MatchData(nowTime,time_flag,EXCEL_NAME,EMAIL_ADDRESS,dcit_sheet_sql):
             allSheetNameDict[i] = dcit_sheet_sql[i][0]
             sql = dcit_sheet_sql[i][1]
             # TODO 下面3行要
-            dbResult = ConnDb()
+            dbResult = ConnDb(**dict_attrib)
             selectResult = SelectDB(dbResult, sql)
             shuJuKuChaXunXinXi.append(selectResult)
 
         # TODO 下面2行要
         workbookName = createExcel(nowTime, time_flag, EXCEL_NAME, *shuJuKuChaXunXinXi, **allSheetNameDict)
-        SendMail(workbookName, EMAIL_ADDRESS, EXCEL_NAME)
+        # SendMail(workbookName, EMAIL_ADDRESS, EXCEL_NAME)
     except Exception as e:
         logger.error("查询数据结果处理功能存在异常：%s" %e)
 
@@ -240,12 +372,13 @@ def ReadMain(XML_NAME):
         captionList = root.findall("EXCEL")  # 在当前指定目录下遍历
         logger.debug(len(captionList))
         for caption in captionList:
+            dict_attrib = caption.attrib
             logger.debug("%s----%s----%s" %(caption.tag, caption.attrib, caption.text))
             child_list = caption.findall("SQL")
             dcit_sheet_sql = {}
             for i in range(len(child_list)):
                 dcit_sheet_sql[str(i+1)] = [child_list[i].attrib['sheet_name'], child_list[i].text]
-            MatchData(nowTime,time_flag,caption.attrib['EXCEL_NAME'],caption.attrib['EMAIL_ADD'],dcit_sheet_sql)
+            MatchData(nowTime,time_flag,dcit_sheet_sql,**dict_attrib)
     except Exception as e:
         logger.error("调用函数功能存在异常：%s" %e)
 

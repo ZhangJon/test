@@ -1,8 +1,12 @@
+#!usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
 # ---数据库
 import pymssql
 import cx_Oracle
 import pymysql
-class DatabaseOpertion(object):
+class DatabaseOperation(object):
     def __init__(self,*args,**kwargs):
         self.conn = None
         self.cursor = None
@@ -80,8 +84,8 @@ class DatabaseOpertion(object):
 # aaa = {'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3306', 'user_name': 'root', 'user_pwd': '123456' ,'values':'5','sql': 'select * from oldboy.student'}
 # bbb = {'database_type': 'M', 'db_name': 'oldboy', 'ip_adress': '10.73.62.217', 'listen_port': '3307', 'user_name': 'root', 'user_pwd': '123456' ,'values':'777777','sql': 'select * from oldboy.student01'}
 #
-# a = DatabaseOpertion(**aaa)
-# b = DatabaseOpertion(**bbb)
+# a = DatabaseOperation(**aaa)
+# b = DatabaseOperation(**bbb)
 #
 # aa = a.SelectDatabase()
 # print(aa)
@@ -117,43 +121,133 @@ class XmlParse(object):
         pass
 
 
-import sys
-from Crypto.Cipher import AES
-from binascii import b2a_hex, a2b_hex
+# 加解密
+import base64
+from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+from cryptography.hazmat.backends import default_backend
 
 
-class prpcrypt():
-    def __init__(self, key):
-        self.key = key
-        self.mode = AES.MODE_CBC
+class AESCrypto(object):
+    """AESCrypto."""
 
-    # 加密函数，如果text不是16的倍数【加密文本text必须为16的倍数！】，那就补足为16的倍数
-    def encrypt(self, text):
-        cryptor = AES.new(self.key, self.mode, self.key)
-        # 这里密钥key 长度必须为16（AES-128）、24（AES-192）、或32（AES-256）Bytes 长度.目前AES-128足够用
-        length = 16
-        count = len(text)
-        add = length - (count % length)
-        text = text + ('\0' * add)
-        self.ciphertext = cryptor.encrypt(text)
-        # 因为AES加密时候得到的字符串不一定是ascii字符集的，输出到终端或者保存时候可能存在问题
-        # 所以这里统一把加密后的字符串转化为16进制字符串
-        return b2a_hex(self.ciphertext)
+    def __init__(self, aes_key, aes_iv):
+        """aes_key, aes_iv 可以自己定义，aes_key 32位，aes_iv 16位，如果用中文，一个中文字占三位"""
+        if not isinstance(aes_key, bytes):
+            aes_key = aes_key.encode()
 
-    # 解密后，去掉补足的空格用strip() 去掉
-    def decrypt(self, text):
-        cryptor = AES.new(self.key, self.mode, self.key)
-        plain_text = cryptor.decrypt(a2b_hex(text))
-        return plain_text.rstrip('\0')
+        if not isinstance(aes_iv, bytes):
+            aes_iv = aes_iv.encode()
 
+        self.aes_key = aes_key
+        self.aes_iv = aes_iv
 
+    def encrypt(self, data, mode='cbc'):
+        """encrypt."""
+        func_name = '{}_encrypt'.format(mode)
+        func = getattr(self, func_name)
+        if not isinstance(data, bytes):
+            data = data.encode()
 
-pc = prpcrypt('keyskeyskeyskeys')  # 初始化密钥
-e = pc.encrypt("00000")
-d = pc.decrypt(e)
-print
-e, d
-e = pc.encrypt("00000000000000000000000000")
-d = pc.decrypt(e)
-print
-e, d
+        return func(data)
+
+    def decrypt(self, data, mode='cbc'):
+        """decrypt."""
+        func_name = '{}_decrypt'.format(mode)
+        func = getattr(self, func_name)
+
+        if not isinstance(data, bytes):
+            data = data.encode()
+
+        return func(data)
+
+    # def cfb_encrypt(self, data):
+    #     """CFB encrypt."""
+    #     cipher = Cipher(algorithms.AES(self.aes_key),
+    #                     modes.CFB(self.aes_iv),
+    #                     backend=default_backend())
+
+    #     return cipher.encryptor().update(data)
+
+    # def cfb_decrypt(self, data):
+    #     """CFB decrypt."""
+    #     cipher = Cipher(algorithms.AES(self.aes_key),
+    #                     modes.CFB(self.aes_iv),
+    #                     backend=default_backend())
+
+    #     return cipher.decryptor().update(data)
+
+    def ctr_encrypt(self, data):
+        """ctr_encrypt."""
+        cipher = Cipher(algorithms.AES(self.aes_key),
+                        modes.CTR(self.aes_iv),
+                        backend=default_backend())
+
+        return cipher.encryptor().update(self.pkcs7_padding(data))
+
+    def ctr_decrypt(self, data):
+        """ctr_decrypt."""
+        cipher = Cipher(algorithms.AES(self.aes_key),
+                        modes.CTR(self.aes_iv),
+                        backend=default_backend())
+
+        uppaded_data = self.pkcs7_unpadding(cipher.decryptor().update(data))
+        return uppaded_data.decode()
+
+    def cbc_encrypt(self, data):
+        """cbc_encrypt."""
+        cipher = Cipher(algorithms.AES(self.aes_key),
+                        modes.CBC(self.aes_iv),
+                        backend=default_backend())
+
+        return cipher.encryptor().update(self.pkcs7_padding(data))
+
+    def cbc_decrypt(self, data):
+        """cbc_decrypt."""
+        cipher = Cipher(algorithms.AES(self.aes_key),
+                        modes.CBC(self.aes_iv),
+                        backend=default_backend())
+
+        uppaded_data = self.pkcs7_unpadding(cipher.decryptor().update(data))
+        return uppaded_data.decode()
+
+    @staticmethod
+    def pkcs7_padding(data):
+        """pkcs7_padding."""
+        padder = padding.PKCS7(algorithms.AES.block_size).padder()
+
+        padded_data = padder.update(data) + padder.finalize()
+
+        return padded_data
+
+    @staticmethod
+    def pkcs7_unpadding(padded_data):
+        """pkcs7_unpadding."""
+        unpadder = padding.PKCS7(algorithms.AES.block_size).unpadder()
+        data = unpadder.update(padded_data)
+
+        try:
+            uppadded_data = data + unpadder.finalize()
+        except ValueError:
+            raise ValueError('无效的加密信息!')
+        else:
+            return uppadded_data
+
+# message = "QWERTYgfdsa12345！·#￥%"
+message = '123456'
+# message = '\x82\x88\x10Q,\xfe\xdcS \xce\x9e\x95\x98,\xffP'
+# crypto = AESCrypto('abcd1111abcd1111abcd1111abcd1111', 'abcd1111abcd1111')
+crypto = AESCrypto('张-密^&($#@-7/*FK-ybf码w-学f', 'm2Vd=G进yt%爱&')
+# crypto = AESCrypto('WDmG1e38igW53YuXkE0SsKUDeLbULAtL', 'm2VyHdx41zRgvg6f')
+data1 = crypto.encrypt(message)
+
+print(data1)
+print(type(data1))
+
+encodestr = str(base64.b64encode(data1),'utf-8')
+print(encodestr)
+print(type(encodestr))
+decodestr = base64.b64decode(encodestr.encode('utf-8'))
+print(decodestr)
+data12 = crypto.decrypt(data1)
+print(data12)
