@@ -232,8 +232,7 @@ class AESCrypto(object):
             return uppadded_data
 
 # message = "QWERTYgfdsa12345！·#￥%"
-# message = '123456'
-message = 'LIS5152QRY'
+message = '123456'
 # message = '\x82\x88\x10Q,\xfe\xdcS \xce\x9e\x95\x98,\xffP'
 # crypto = AESCrypto('abcd1111abcd1111abcd1111abcd1111', 'abcd1111abcd1111')
 crypto = AESCrypto('张-密^&($#@-7/*FK-ybf码w-学f', 'm2Vd=G进yt%爱&')
