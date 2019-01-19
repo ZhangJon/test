@@ -220,7 +220,7 @@ def ConnDb(**dict_attrib):
             conn = pymssql.connect(ip_adress, user_name, user_pwd, db_name)
             return conn
     except Exception as e:
-        logger.error("连接数据库功能存在异常：%s" %e)
+        logger.exception("连接数据库功能存在异常：%s" %e)
 
 
 def SelectDB(db, sql):
@@ -240,7 +240,7 @@ def SelectDB(db, sql):
         db.close()
         return result
     except Exception as e:
-        logger.error("数据库执行脚本功能存在异常：%s" %e)
+        logger.exception("数据库执行脚本功能存在异常：%s" %e)
 
 
 def SendMail(workbookName,emailto,excelname):
@@ -277,7 +277,7 @@ def SendMail(workbookName,emailto,excelname):
         smtp.sendmail(sender, receiver.split(','), msg.as_string())
         smtp.quit()
     except Exception as e:
-        logger.error("发送邮件功能存在异常：%s" %e)
+        logger.exception("发送邮件功能存在异常：%s" %e)
 
 
 def WriteNewDataToExcel(oneOfTheQueryData,oneOfTheSheetName):
@@ -294,7 +294,7 @@ def WriteNewDataToExcel(oneOfTheQueryData,oneOfTheSheetName):
             for j in range(column_len_table_name):
                 oneOfTheSheetName.cell(row=i + 2, column=j + 2).value = oneOfTheQueryData[i][j]
     except Exception as e:
-        logger.error("写入Excel存在异常：%s" %e)
+        logger.exception("写入Excel存在异常：%s" %e)
 
 
 def CreateFlag(sheet_name,time_flag):
@@ -304,7 +304,7 @@ def CreateFlag(sheet_name,time_flag):
         sheet_values = "截止至%s业绩报告" %time_flag
         sheet_name.cell(row=23, column=1).value = sheet_values
     except Exception as e:
-        logger.error("创建日期存在异常：%s" %e)
+        logger.exception("创建日期存在异常：%s" %e)
 
 
 def createExcel(nowTime,time_flag,excelname,*shuJuKuChaXunXinXi,**allSheetNameDict):
@@ -326,7 +326,7 @@ def createExcel(nowTime,time_flag,excelname,*shuJuKuChaXunXinXi,**allSheetNameDi
         wb.save(workbookName)
         return workbookName
     except Exception as e:
-        logger.error("创建保存Excel存在异常：%s" %e)
+        logger.exception("创建保存Excel存在异常：%s" %e)
 
 
 def MatchData(nowTime,time_flag,dcit_sheet_sql,**dict_attrib):

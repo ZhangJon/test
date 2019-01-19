@@ -1,1 +1,66 @@
-﻿
+﻿2019-01-17 14:27:23,759 - __main__ - INFO - APP_Q_DATA.py - ReadMain - 365  - EXP_DATA_CONF.xml
+2019-01-17 14:27:23,759 - __main__ - INFO - APP_Q_DATA.py - ReadMain - 367  - D:\GitHub\test\export_data\EXP_DATA_CONF.xml
+2019-01-17 14:27:33,950 - __main__ - ERROR - APP_Q_DATA.py - ConnDb - 223  - 连接数据库功能存在异常：(2003, "Can't connect to MySQL server on '10.73.62.217' (timed out)")
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Envs\env36\lib\site-packages\pymysql\connections.py", line 582, in connect
+    **kwargs)
+  File "c:\python36-32\Lib\socket.py", line 724, in create_connection
+    raise err
+  File "c:\python36-32\Lib\socket.py", line 713, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/GitHub/test/export_data/APP_Q_DATA.py", line 217, in ConnDb
+    conn = pymysql.connect(ip_adress, user_name, user_pwd, db_name, charset='utf8')
+  File "C:\Users\Administrator\Envs\env36\lib\site-packages\pymysql\__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\Administrator\Envs\env36\lib\site-packages\pymysql\connections.py", line 327, in __init__
+    self.connect()
+  File "C:\Users\Administrator\Envs\env36\lib\site-packages\pymysql\connections.py", line 629, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '10.73.62.217' (timed out)")
+2019-01-17 14:27:33,958 - __main__ - ERROR - APP_Q_DATA.py - SelectDB - 243  - 数据库执行脚本功能存在异常：'NoneType' object has no attribute 'cursor'
+Traceback (most recent call last):
+  File "D:/GitHub/test/export_data/APP_Q_DATA.py", line 236, in SelectDB
+    cursor = db.cursor()
+AttributeError: 'NoneType' object has no attribute 'cursor'
+2019-01-17 14:27:43,962 - __main__ - ERROR - APP_Q_DATA.py - ConnDb - 223  - 连接数据库功能存在异常：(2003, "Can't connect to MySQL server on '10.73.62.217' (timed out)")
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Envs\env36\lib\site-packages\pymysql\connections.py", line 582, in connect
+    **kwargs)
+  File "c:\python36-32\Lib\socket.py", line 724, in create_connection
+    raise err
+  File "c:\python36-32\Lib\socket.py", line 713, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/GitHub/test/export_data/APP_Q_DATA.py", line 217, in ConnDb
+    conn = pymysql.connect(ip_adress, user_name, user_pwd, db_name, charset='utf8')
+  File "C:\Users\Administrator\Envs\env36\lib\site-packages\pymysql\__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\Administrator\Envs\env36\lib\site-packages\pymysql\connections.py", line 327, in __init__
+    self.connect()
+  File "C:\Users\Administrator\Envs\env36\lib\site-packages\pymysql\connections.py", line 629, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '10.73.62.217' (timed out)")
+2019-01-17 14:27:43,964 - __main__ - ERROR - APP_Q_DATA.py - SelectDB - 243  - 数据库执行脚本功能存在异常：'NoneType' object has no attribute 'cursor'
+Traceback (most recent call last):
+  File "D:/GitHub/test/export_data/APP_Q_DATA.py", line 236, in SelectDB
+    cursor = db.cursor()
+AttributeError: 'NoneType' object has no attribute 'cursor'
+2019-01-17 14:27:44,106 - __main__ - ERROR - APP_Q_DATA.py - WriteNewDataToExcel - 297  - 写入Excel存在异常：object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "D:/GitHub/test/export_data/APP_Q_DATA.py", line 287, in WriteNewDataToExcel
+    row_len_table_name = len(oneOfTheQueryData)
+TypeError: object of type 'NoneType' has no len()
+2019-01-17 14:27:44,107 - __main__ - ERROR - APP_Q_DATA.py - WriteNewDataToExcel - 297  - 写入Excel存在异常：object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "D:/GitHub/test/export_data/APP_Q_DATA.py", line 287, in WriteNewDataToExcel
+    row_len_table_name = len(oneOfTheQueryData)
+TypeError: object of type 'NoneType' has no len()
