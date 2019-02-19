@@ -64,3 +64,5 @@ Traceback (most recent call last):
   File "D:/GitHub/test/export_data/APP_Q_DATA.py", line 287, in WriteNewDataToExcel
     row_len_table_name = len(oneOfTheQueryData)
 TypeError: object of type 'NoneType' has no len()
+2019-02-18 10:21:56,771 - __main__ - INFO - APP_Q_DATA.py - ReadMain - 365  - EXP_DATA_CONF.xml
+2019-02-18 10:21:56,787 - __main__ - INFO - APP_Q_DATA.py - ReadMain - 367  - D:\GitHub\test\export_data\EXP_DATA_CONF.xml
