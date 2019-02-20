@@ -1,0 +1,10 @@
+2019-01-18 22:27:56,078 - __main__ - INFO - APP_Q_DATA.py - ReadMain - 365  - EXP_DATA_CONF.xml
+2019-01-18 22:27:56,079 - __main__ - INFO - APP_Q_DATA.py - ReadMain - 367  - F:\PycharmProjects\GitHub\test\export_data\dist\EXP_DATA_CONF.xml
+2019-01-18 22:28:06,210 - __main__ - ERROR - APP_Q_DATA.py - ConnDb - 223  - 连接数据库功能存在异常：(2003, "Can't connect to MySQL server on '10.73.62.217' (timed out)")
+2019-01-18 22:28:06,220 - __main__ - ERROR - APP_Q_DATA.py - SelectDB - 243  - 数据库执行脚本功能存在异常：'NoneType' object has no attribute 'cursor'
+2019-01-18 22:28:16,239 - __main__ - ERROR - APP_Q_DATA.py - ConnDb - 223  - 连接数据库功能存在异常：(2003, "Can't connect to MySQL server on '10.73.62.217' (timed out)")
+2019-01-18 22:28:16,247 - __main__ - ERROR - APP_Q_DATA.py - SelectDB - 243  - 数据库执行脚本功能存在异常：'NoneType' object has no attribute 'cursor'
+2019-01-18 22:28:16,316 - __main__ - ERROR - APP_Q_DATA.py - WriteNewDataToExcel - 297  - 写入Excel存在异常：object of type 'NoneType' has no len()
+2019-01-18 22:28:16,320 - __main__ - ERROR - APP_Q_DATA.py - WriteNewDataToExcel - 297  - 写入Excel存在异常：object of type 'NoneType' has no len()
+2019-01-18 22:28:57,213 - __main__ - INFO - APP_Q_DATA.py - ReadMain - 365  - EXP_DATA_CONF.xml
+2019-01-18 22:28:57,214 - __main__ - INFO - APP_Q_DATA.py - ReadMain - 367  - F:\PycharmProjects\GitHub\test\export_data\dist\EXP_DATA_CONF.xml

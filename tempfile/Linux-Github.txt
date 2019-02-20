@@ -1,0 +1,452 @@
+[root@Python01 ~]# su - jon
+[jon@Python01 ~]$ workon django_oracle
+(django_oracle) [jon@Python01 ~]$ 
+(django_oracle) [jon@Python01 ~]$ 
+(django_oracle) [jon@Python01 ~]$ 
+(django_oracle) [jon@Python01 ~]$ ls
+(django_oracle) [jon@Python01 ~]$ ls -alr
+total 44
+-rw-------  1 jon  root 1870 Jan 20 09:37 .viminfo
+drwxr-xr-x  4 jon  jon  4096 Jun  9  2018 .mozilla
+drwxr-xr-x  3 jon  jon  4096 Jan 17 20:59 .gnome2
+drwx------  3 jon  root 4096 Jan 19 00:26 .cache
+-rw-r--r--  1 jon  jon   273 Jan 19 00:44 .bashrc
+-rw-r--r--  1 jon  jon   177 Jan 19 00:45 .bash_profile
+-rw-r--r--  1 jon  jon    18 Jul  9  2013 .bash_logout
+-rw-------  1 jon  root 4812 Jan 21 22:48 .bash_history
+drwxr-xr-x. 4 root root 4096 Jan 19 01:28 ..
+drwx------  5 jon  jon  4096 Jan 21 03:16 .
+(django_oracle) [jon@Python01 ~]$ tcd /home/
+-bash: tcd: command not found
+(django_oracle) [jon@Python01 ~]$ cd /home/app/
+(django_oracle) [jon@Python01 app]$ ls
+DatabaseOperation
+(django_oracle) [jon@Python01 app]$ cd DatabaseOperation/
+(django_oracle) [jon@Python01 DatabaseOperation]$ ls
+APPS  DatabaseOperation  manage.py  static  templates
+(django_oracle) [jon@Python01 DatabaseOperation]$ cd ..
+(django_oracle) [jon@Python01 app]$ ls
+DatabaseOperation
+(django_oracle) [jon@Python01 app]$ cd app
+-bash: cd: app: No such file or directory
+(django_oracle) [jon@Python01 app]$ cd ..
+(django_oracle) [jon@Python01 home]$ ls
+app  jon
+(django_oracle) [jon@Python01 home]$ ls -alrt
+total 16
+dr-xr-xr-x. 27 root root 4096 Jan 17 20:34 ..
+drwxr-xr-x.  4 root root 4096 Jan 19 01:28 .
+drwxrwxrwx   3 root root 4096 Jan 19 01:30 app
+drwx------   5 jon  jon  4096 Jan 21 03:16 jon
+(django_oracle) [jon@Python01 home]$ cd app/
+(django_oracle) [jon@Python01 app]$ git config --global user.name "ZhangJon"
+(django_oracle) [jon@Python01 app]$ git config --global user.email "zj.fly100@gmail.com"
+(django_oracle) [jon@Python01 app]$ git init
+Initialized empty Git repository in /home/app/.git/
+(django_oracle) [jon@Python01 app]$ 
+(django_oracle) [jon@Python01 app]$ 
+(django_oracle) [jon@Python01 app]$ ls
+DatabaseOperation
+(django_oracle) [jon@Python01 app]$ ls -alrt
+total 16
+drwxr-xr-x. 4 root root 4096 Jan 19 01:28 ..
+drwxr-xr-x  6 jon  root 4096 Jan 21 18:32 DatabaseOperation
+drwxrwxrwx  4 root root 4096 Jan 21 23:43 .
+drwxr-xr-x  7 jon  root 4096 Jan 21 23:43 .git
+(django_oracle) [jon@Python01 app]$ ls
+DatabaseOperation
+(django_oracle) [jon@Python01 app]$ ls
+DatabaseOperation
+(django_oracle) [jon@Python01 app]$ git status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	DatabaseOperation/
+nothing added to commit but untracked files present (use "git add" to track)
+(django_oracle) [jon@Python01 app]$ git add DatabaseOperation/
+(django_oracle) [jon@Python01 app]$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   DatabaseOperation/APPS/dataoperation/__init__.py
+#	new file:   DatabaseOperation/APPS/dataoperation/__pycache__/__init__.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/dataoperation/__pycache__/admin.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/dataoperation/__pycache__/models.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/dataoperation/__pycache__/urls.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/dataoperation/__pycache__/views.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/dataoperation/admin.py
+#	new file:   DatabaseOperation/APPS/dataoperation/apps.py
+#	new file:   DatabaseOperation/APPS/dataoperation/migrations/__init__.py
+#	new file:   DatabaseOperation/APPS/dataoperation/migrations/__pycache__/__init__.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/dataoperation/models.py
+#	new file:   DatabaseOperation/APPS/dataoperation/tests.py
+#	new file:   DatabaseOperation/APPS/dataoperation/urls.py
+#	new file:   DatabaseOperation/APPS/dataoperation/views.py
+#	new file:   DatabaseOperation/APPS/datareport/__init__.py
+#	new file:   DatabaseOperation/APPS/datareport/__pycache__/__init__.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/datareport/__pycache__/admin.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/datareport/__pycache__/models.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/datareport/__pycache__/urls.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/datareport/__pycache__/views.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/datareport/admin.py
+#	new file:   DatabaseOperation/APPS/datareport/apps.py
+#	new file:   DatabaseOperation/APPS/datareport/migrations/__init__.py
+#	new file:   DatabaseOperation/APPS/datareport/migrations/__pycache__/__init__.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/datareport/models.py
+#	new file:   DatabaseOperation/APPS/datareport/tests.py
+#	new file:   DatabaseOperation/APPS/datareport/urls.py
+#	new file:   DatabaseOperation/APPS/datareport/views.py
+#	new file:   DatabaseOperation/APPS/homepage/__init__.py
+#	new file:   DatabaseOperation/APPS/homepage/__pycache__/__init__.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/homepage/__pycache__/admin.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/homepage/__pycache__/models.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/homepage/__pycache__/urls.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/homepage/__pycache__/views.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/homepage/admin.py
+#	new file:   DatabaseOperation/APPS/homepage/apps.py
+#	new file:   DatabaseOperation/APPS/homepage/migrations/__init__.py
+#	new file:   DatabaseOperation/APPS/homepage/migrations/__pycache__/__init__.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/homepage/models.py
+#	new file:   DatabaseOperation/APPS/homepage/tests.py
+#	new file:   DatabaseOperation/APPS/homepage/urls.py
+#	new file:   DatabaseOperation/APPS/homepage/views.py
+#	new file:   DatabaseOperation/APPS/infodisplay/__init__.py
+#	new file:   DatabaseOperation/APPS/infodisplay/__pycache__/__init__.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/infodisplay/__pycache__/admin.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/infodisplay/__pycache__/models.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/infodisplay/__pycache__/urls.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/infodisplay/__pycache__/views.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/infodisplay/admin.py
+#	new file:   DatabaseOperation/APPS/infodisplay/apps.py
+#	new file:   DatabaseOperation/APPS/infodisplay/migrations/__init__.py
+#	new file:   DatabaseOperation/APPS/infodisplay/migrations/__pycache__/__init__.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/infodisplay/models.py
+#	new file:   DatabaseOperation/APPS/infodisplay/templates/infodisplay/database.html
+#	new file:   DatabaseOperation/APPS/infodisplay/templates/infodisplay/host.html
+#	new file:   DatabaseOperation/APPS/infodisplay/tests.py
+#	new file:   DatabaseOperation/APPS/infodisplay/urls.py
+#	new file:   DatabaseOperation/APPS/infodisplay/views.py
+#	new file:   DatabaseOperation/APPS/infomanage/__init__.py
+#	new file:   DatabaseOperation/APPS/infomanage/__pycache__/__init__.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/infomanage/__pycache__/admin.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/infomanage/__pycache__/models.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/infomanage/__pycache__/urls.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/infomanage/__pycache__/views.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/infomanage/admin.py
+#	new file:   DatabaseOperation/APPS/infomanage/apps.py
+#	new file:   DatabaseOperation/APPS/infomanage/migrations/0001_initial.py
+#	new file:   DatabaseOperation/APPS/infomanage/migrations/0002_databaseinfo_status.py
+#	new file:   DatabaseOperation/APPS/infomanage/migrations/__init__.py
+#	new file:   DatabaseOperation/APPS/infomanage/migrations/__pycache__/0001_initial.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/infomanage/migrations/__pycache__/0002_databaseinfo_status.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/infomanage/migrations/__pycache__/__init__.cpython-36.pyc
+#	new file:   DatabaseOperation/APPS/infomanage/models.py
+#	new file:   DatabaseOperation/APPS/infomanage/tests.py
+#	new file:   DatabaseOperation/APPS/infomanage/urls.py
+#	new file:   DatabaseOperation/APPS/infomanage/views.py
+#	new file:   DatabaseOperation/DatabaseOperation/__init__.py
+#	new file:   DatabaseOperation/DatabaseOperation/__pycache__/__init__.cpython-36.pyc
+#	new file:   DatabaseOperation/DatabaseOperation/__pycache__/settings.cpython-36.pyc
+#	new file:   DatabaseOperation/DatabaseOperation/__pycache__/urls.cpython-36.pyc
+#	new file:   DatabaseOperation/DatabaseOperation/__pycache__/wsgi.cpython-36.pyc
+#	new file:   DatabaseOperation/DatabaseOperation/models.py
+#	new file:   DatabaseOperation/DatabaseOperation/settings.py
+#	new file:   DatabaseOperation/DatabaseOperation/urls.py
+#	new file:   DatabaseOperation/DatabaseOperation/wsgi.py
+#	new file:   DatabaseOperation/manage.py
+#	new file:   DatabaseOperation/static/css/bootstrap-responsive.css
+#	new file:   DatabaseOperation/static/css/bootstrap.css
+#	new file:   DatabaseOperation/static/js/bootstrap-alert.js
+#	new file:   DatabaseOperation/static/js/bootstrap-button.js
+#	new file:   DatabaseOperation/static/js/bootstrap-carousel.js
+#	new file:   DatabaseOperation/static/js/bootstrap-collapse.js
+#	new file:   DatabaseOperation/static/js/bootstrap-dropdown.js
+#	new file:   DatabaseOperation/static/js/bootstrap-modal.js
+#	new file:   DatabaseOperation/static/js/bootstrap-popover.js
+#	new file:   DatabaseOperation/static/js/bootstrap-scrollspy.js
+#	new file:   DatabaseOperation/static/js/bootstrap-tab.js
+#	new file:   DatabaseOperation/static/js/bootstrap-tooltip.js
+#	new file:   DatabaseOperation/static/js/bootstrap-transition.js
+#	new file:   DatabaseOperation/static/js/bootstrap-typeahead.js
+#	new file:   DatabaseOperation/static/js/jquery.js
+#	new file:   DatabaseOperation/templates/base.html
+#	new file:   DatabaseOperation/templates/index.html
+#
+(django_oracle) [jon@Python01 app]$ git remote add origin git@github.com:ZhangJon/DBO
+(django_oracle) [jon@Python01 app]$ git commit -m 'first commit'
+[master (root-commit) 60c540f] first commit
+ 93 files changed, 10249 insertions(+), 0 deletions(-)
+ create mode 100644 DatabaseOperation/APPS/dataoperation/__init__.py
+ create mode 100644 DatabaseOperation/APPS/dataoperation/__pycache__/__init__.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/dataoperation/__pycache__/admin.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/dataoperation/__pycache__/models.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/dataoperation/__pycache__/urls.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/dataoperation/__pycache__/views.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/dataoperation/admin.py
+ create mode 100644 DatabaseOperation/APPS/dataoperation/apps.py
+ create mode 100644 DatabaseOperation/APPS/dataoperation/migrations/__init__.py
+ create mode 100644 DatabaseOperation/APPS/dataoperation/migrations/__pycache__/__init__.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/dataoperation/models.py
+ create mode 100644 DatabaseOperation/APPS/dataoperation/tests.py
+ create mode 100644 DatabaseOperation/APPS/dataoperation/urls.py
+ create mode 100644 DatabaseOperation/APPS/dataoperation/views.py
+ create mode 100644 DatabaseOperation/APPS/datareport/__init__.py
+ create mode 100644 DatabaseOperation/APPS/datareport/__pycache__/__init__.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/datareport/__pycache__/admin.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/datareport/__pycache__/models.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/datareport/__pycache__/urls.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/datareport/__pycache__/views.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/datareport/admin.py
+ create mode 100644 DatabaseOperation/APPS/datareport/apps.py
+ create mode 100644 DatabaseOperation/APPS/datareport/migrations/__init__.py
+ create mode 100644 DatabaseOperation/APPS/datareport/migrations/__pycache__/__init__.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/datareport/models.py
+ create mode 100644 DatabaseOperation/APPS/datareport/tests.py
+ create mode 100644 DatabaseOperation/APPS/datareport/urls.py
+ create mode 100644 DatabaseOperation/APPS/datareport/views.py
+ create mode 100644 DatabaseOperation/APPS/homepage/__init__.py
+ create mode 100644 DatabaseOperation/APPS/homepage/__pycache__/__init__.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/homepage/__pycache__/admin.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/homepage/__pycache__/models.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/homepage/__pycache__/urls.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/homepage/__pycache__/views.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/homepage/admin.py
+ create mode 100644 DatabaseOperation/APPS/homepage/apps.py
+ create mode 100644 DatabaseOperation/APPS/homepage/migrations/__init__.py
+ create mode 100644 DatabaseOperation/APPS/homepage/migrations/__pycache__/__init__.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/homepage/models.py
+ create mode 100644 DatabaseOperation/APPS/homepage/tests.py
+ create mode 100644 DatabaseOperation/APPS/homepage/urls.py
+ create mode 100644 DatabaseOperation/APPS/homepage/views.py
+ create mode 100644 DatabaseOperation/APPS/infodisplay/__init__.py
+ create mode 100644 DatabaseOperation/APPS/infodisplay/__pycache__/__init__.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/infodisplay/__pycache__/admin.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/infodisplay/__pycache__/models.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/infodisplay/__pycache__/urls.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/infodisplay/__pycache__/views.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/infodisplay/admin.py
+ create mode 100644 DatabaseOperation/APPS/infodisplay/apps.py
+ create mode 100644 DatabaseOperation/APPS/infodisplay/migrations/__init__.py
+ create mode 100644 DatabaseOperation/APPS/infodisplay/migrations/__pycache__/__init__.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/infodisplay/models.py
+ create mode 100644 DatabaseOperation/APPS/infodisplay/templates/infodisplay/database.html
+ create mode 100644 DatabaseOperation/APPS/infodisplay/templates/infodisplay/host.html
+ create mode 100644 DatabaseOperation/APPS/infodisplay/tests.py
+ create mode 100644 DatabaseOperation/APPS/infodisplay/urls.py
+ create mode 100644 DatabaseOperation/APPS/infodisplay/views.py
+ create mode 100644 DatabaseOperation/APPS/infomanage/__init__.py
+ create mode 100644 DatabaseOperation/APPS/infomanage/__pycache__/__init__.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/infomanage/__pycache__/admin.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/infomanage/__pycache__/models.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/infomanage/__pycache__/urls.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/infomanage/__pycache__/views.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/infomanage/admin.py
+ create mode 100644 DatabaseOperation/APPS/infomanage/apps.py
+ create mode 100644 DatabaseOperation/APPS/infomanage/migrations/0001_initial.py
+ create mode 100644 DatabaseOperation/APPS/infomanage/migrations/0002_databaseinfo_status.py
+ create mode 100644 DatabaseOperation/APPS/infomanage/migrations/__init__.py
+ create mode 100644 DatabaseOperation/APPS/infomanage/migrations/__pycache__/0001_initial.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/infomanage/migrations/__pycache__/0002_databaseinfo_status.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/infomanage/migrations/__pycache__/__init__.cpython-36.pyc
+ create mode 100644 DatabaseOperation/APPS/infomanage/models.py
+ create mode 100644 DatabaseOperation/APPS/infomanage/tests.py
+ create mode 100644 DatabaseOperation/APPS/infomanage/urls.py
+ create mode 100644 DatabaseOperation/APPS/infomanage/views.py
+ create mode 100644 DatabaseOperation/DatabaseOperation/__init__.py
+ create mode 100644 DatabaseOperation/DatabaseOperation/__pycache__/__init__.cpython-36.pyc
+ create mode 100644 DatabaseOperation/DatabaseOperation/__pycache__/settings.cpython-36.pyc
+ create mode 100644 DatabaseOperation/DatabaseOperation/__pycache__/urls.cpython-36.pyc
+ create mode 100644 DatabaseOperation/DatabaseOperation/__pycache__/wsgi.cpython-36.pyc
+ create mode 100644 DatabaseOperation/DatabaseOperation/models.py
+ create mode 100644 DatabaseOperation/DatabaseOperation/settings.py
+ create mode 100644 DatabaseOperation/DatabaseOperation/urls.py
+ create mode 100644 DatabaseOperation/DatabaseOperation/wsgi.py
+ create mode 100755 DatabaseOperation/manage.py
+ create mode 100644 DatabaseOperation/static/css/bootstrap-responsive.css
+ create mode 100644 DatabaseOperation/static/css/bootstrap.css
+ create mode 100644 DatabaseOperation/static/js/bootstrap-alert.js
+ create mode 100644 DatabaseOperation/static/js/bootstrap-button.js
+ create mode 100644 DatabaseOperation/static/js/bootstrap-carousel.js
+ create mode 100644 DatabaseOperation/static/js/bootstrap-collapse.js
+ create mode 100644 DatabaseOperation/static/js/bootstrap-dropdown.js
+ create mode 100644 DatabaseOperation/static/js/bootstrap-modal.js
+ create mode 100644 DatabaseOperation/static/js/bootstrap-popover.js
+ create mode 100644 DatabaseOperation/static/js/bootstrap-scrollspy.js
+ create mode 100644 DatabaseOperation/static/js/bootstrap-tab.js
+ create mode 100644 DatabaseOperation/static/js/bootstrap-tooltip.js
+ create mode 100644 DatabaseOperation/static/js/bootstrap-transition.js
+ create mode 100644 DatabaseOperation/static/js/bootstrap-typeahead.js
+ create mode 100644 DatabaseOperation/static/js/jquery.js
+ create mode 100644 DatabaseOperation/templates/base.html
+ create mode 100644 DatabaseOperation/templates/index.html
+(django_oracle) [jon@Python01 app]$ git push origin master
+The authenticity of host 'github.com (52.74.223.119)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,52.74.223.119' (RSA) to the list of known hosts.
+Permission denied (publickey).
+fatal: The remote end hung up unexpectedly
+(django_oracle) [jon@Python01 app]$ git push origin master
+Warning: Permanently added the RSA host key for IP address '13.229.188.59' to the list of known hosts.
+Permission denied (publickey).
+fatal: The remote end hung up unexpectedly
+(django_oracle) [jon@Python01 app]$ ssh-keygen -t rsa -C "zj.fly100@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/jon/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/jon/.ssh/id_rsa.
+Your public key has been saved in /home/jon/.ssh/id_rsa.pub.
+The key fingerprint is:
+98:29:ef:c1:58:4a:72:8f:98:25:e5:79:a7:b6:7b:de zj.fly100@gmail.com
+The key's randomart image is:
++--[ RSA 2048]----+
+|                 |
+|                 |
+|    .            |
+|   o . +         |
+|  o B * S        |
+|   O @ o         |
+|  o + B          |
+|     o o..       |
+|      ++. E      |
++-----------------+
+(django_oracle) [jon@Python01 app]$ 
+(django_oracle) [jon@Python01 app]$ 
+(django_oracle) [jon@Python01 app]$ 
+(django_oracle) [jon@Python01 app]$ cd /home/jon/.ssh/
+(django_oracle) [jon@Python01 .ssh]$ ls
+id_rsa  id_rsa.pub  known_hosts
+(django_oracle) [jon@Python01 .ssh]$ more id_rsa.pub 
+ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAqXDqnpGjLQ0kVvcZYRLzNMt3HPxp9MkvBlRGNMZZQc892lb7ImaEgs6WK6uxA8QOBNXf3kajj1k9d8UrrnmVciweQrB7nbLmwmchkouDsEOdAt
+9+PJEm5DL691J4D7oZdtdxlG8+dThp2sPGQoD4bvykwd7j2n4vZdM3wzYGnp9Kfndfn6GElQkxpnAEbtWnDJkf24qogCp654B78Yf760nBDsJ2/f3zBTv0jpFdpLTjvPesb8qHhQwkEGisxCmf
+TEK7pLnIHgdQD7W88diOeu8rkqtbhMJNx1gB+7BEI+gWDzGciOc1puu3ZE5BFzDpP8a3OoX7p4w8/DSRE2w7bw== zj.fly100@gmail.com
+(django_oracle) [jon@Python01 .ssh]$ git push origin master
+fatal: Not a git repository (or any of the parent directories): .git
+(django_oracle) [jon@Python01 .ssh]$ ssh -T git@github.com
+Warning: Permanently added the RSA host key for IP address '13.250.177.223' to the list of known hosts.
+Hi ZhangJon! You've successfully authenticated, but GitHub does not provide shell access.
+(django_oracle) [jon@Python01 .ssh]$ git push origin master
+fatal: Not a git repository (or any of the parent directories): .git
+(django_oracle) [jon@Python01 .ssh]$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+(django_oracle) [jon@Python01 .ssh]$ cd /home/app/
+(django_oracle) [jon@Python01 app]$ ls
+DatabaseOperation
+(django_oracle) [jon@Python01 app]$ ls -alrt
+total 16
+drwxr-xr-x. 4 root root 4096 Jan 19 01:28 ..
+drwxr-xr-x  6 jon  root 4096 Jan 21 18:32 DatabaseOperation
+drwxrwxrwx  4 root root 4096 Jan 21 23:43 .
+drwxr-xr-x  8 jon  root 4096 Jan 21 23:46 .git
+(django_oracle) [jon@Python01 app]$ git push origin master
+ERROR: Repository not found.
+fatal: The remote end hung up unexpectedly
+(django_oracle) [jon@Python01 app]$ git status
+# On branch master
+nothing to commit (working directory clean)
+(django_oracle) [jon@Python01 app]$ git commit -m 'the main'
+# On branch master
+nothing to commit (working directory clean)
+(django_oracle) [jon@Python01 app]$ git add DatabaseOperation/
+(django_oracle) [jon@Python01 app]$ git status
+# On branch master
+nothing to commit (working directory clean)
+(django_oracle) [jon@Python01 app]$ ls
+DatabaseOperation
+(django_oracle) [jon@Python01 app]$ ls -alrt
+total 16
+drwxr-xr-x. 4 root root 4096 Jan 19 01:28 ..
+drwxr-xr-x  6 jon  root 4096 Jan 21 18:32 DatabaseOperation
+drwxrwxrwx  4 root root 4096 Jan 21 23:43 .
+drwxr-xr-x  8 jon  root 4096 Jan 21 23:57 .git
+(django_oracle) [jon@Python01 app]$ DatabaseOperation/
+-bash: DatabaseOperation/: is a directory
+(django_oracle) [jon@Python01 app]$ ls
+DatabaseOperation
+(django_oracle) [jon@Python01 app]$ cd DatabaseOperation/
+(django_oracle) [jon@Python01 DatabaseOperation]$ ls
+APPS  DatabaseOperation  manage.py  static  templates
+(django_oracle) [jon@Python01 DatabaseOperation]$ cd .
+(django_oracle) [jon@Python01 DatabaseOperation]$ cd ..
+(django_oracle) [jon@Python01 app]$ ls
+DatabaseOperation
+(django_oracle) [jon@Python01 app]$ vi README
+(django_oracle) [jon@Python01 app]$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	README
+nothing added to commit but untracked files present (use "git add" to track)
+(django_oracle) [jon@Python01 app]$ git add README
+(django_oracle) [jon@Python01 app]$ git push
+ERROR: Repository not found.
+fatal: The remote end hung up unexpectedly
+(django_oracle) [jon@Python01 app]$ git push
+No refs in common and none specified; doing nothing.
+Perhaps you should specify a branch such as 'master'.
+error: failed to push some refs to 'git@github.com:ZhangJon/DBO'
+(django_oracle) [jon@Python01 app]$ git push -u origin master
+Counting objects: 115, done.
+Compressing objects: 100% (111/111), done.
+Writing objects: 100% (115/115), 95.42 KiB, done.
+Total 115 (delta 27), reused 0 (delta 0)
+remote: Resolving deltas: 100% (27/27), done.
+To git@github.com:ZhangJon/DBO
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+(django_oracle) [jon@Python01 app]$ ls
+DatabaseOperation  README
+(django_oracle) [jon@Python01 app]$ rm README
+(django_oracle) [jon@Python01 app]$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   README
+#
+# Changed but not updated:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    README
+#
+(django_oracle) [jon@Python01 app]$ git rm README
+rm 'README'
+(django_oracle) [jon@Python01 app]$ git status
+# On branch master
+nothing to commit (working directory clean)
+(django_oracle) [jon@Python01 app]$ 
+
+
+
+…or create a new repository on the command line
+echo "# DBO" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/ZhangJon/DBO.git
+git push -u origin master
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/ZhangJon/DBO.git
+git push -u origin master
+
+
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+
+
+https://blog.csdn.net/Guet_Kite/article/details/78759737
+

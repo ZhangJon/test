@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Beging>
+    <EXCEL EXCEL_NAME="业绩报表检查" EMAIL_ADD="jin.zhang@ccb-life.com.cn,kang.lin@ccb-life.com.cn" database_type="M" db_name="oldboy" ip_adress="10.73.62.217" listen_port="3306" user_name="root" user_pwd="yVcFM/7zg+Q8muQ1omP33g==">
+        <SQL sheet_name="总量">select * from oldboy.student</SQL>
+        <SQL sheet_name="退保">select * from oldboy.student02</SQL>
+    </EXCEL>
+</Beging>
